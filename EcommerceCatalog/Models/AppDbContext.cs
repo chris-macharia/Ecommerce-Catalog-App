@@ -9,6 +9,7 @@ namespace EcommerceCatalog.Models
         {
         }
 
-        // We'll add DbSets here later
+        // Create a Products table
+        public DbSet<Product> Products { get; set; }
     }
 }
