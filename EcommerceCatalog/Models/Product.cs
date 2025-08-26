@@ -24,5 +24,9 @@ namespace EcommerceCatalog.Models
         [Range(0, int.MaxValue)] // Stock cannot be negative
         public int Stock { get; set; }
 
+        // Add the 'category' attribute to the products
+        public int? CategoryId { get; set; } 
+        public Category? Category { get; set; }
+
     }
 }

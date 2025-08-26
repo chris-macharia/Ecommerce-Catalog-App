@@ -11,5 +11,6 @@ namespace EcommerceCatalog.Models
 
         // Create a Products table
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; } // Register category in DBContext
     }
 }
