@@ -45,6 +45,7 @@ namespace EcommerceCatalog.Controllers
         // GET: Products/Create
         public IActionResult Create()
         {
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name"); // Populate Viewdata[] with a list of categories from the DB.
             return View();
         }
 
@@ -77,6 +78,7 @@ namespace EcommerceCatalog.Controllers
             {
                 return NotFound();
             }
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", product.CategoryId); //Pre-select the current category.
             return View(product);
         }
 
